@@ -25,7 +25,6 @@ import subprocess
 import sys
 from packaging.version import Version
 
-import numpy
 import setuptools.command.build_py
 import setuptools.command.develop
 from Cython.Build import cythonize
@@ -88,7 +87,6 @@ setup(
     long_description_content_type="text/markdown",
     license="MPL-2.0",
     # cython
-    include_dirs=numpy.get_include(),
     ext_modules=cythonize(exts, language_level=3),
     # ext_modules=find_cython_extensions(),
     # package
